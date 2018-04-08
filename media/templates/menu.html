@@ -1,0 +1,57 @@
+<div class="brand">
+    Security Advisor
+</div>
+<i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+<div class="menu-list">
+
+    <ul id="menu-content" class="menu-content collapse out">
+        <li>
+            <a href="index.html">
+                <i class="fa fa-home fa-lg"></i> Home
+            </a>
+        </li>
+
+        <li data-toggle="collapse" data-target="#products" class="collapsed">
+            <a href="{{ url_for('zone.zone_list') }}"><i class="fa fa-list fa-lg"></i> Zone Mgr</a>
+        </li>
+
+        <li data-toggle="collapse" data-target="#products" class="collapsed">
+            <a href="asset.html"><i class="fa fa-desktop fa-lg"></i> Asset Mgr</a>
+        </li>
+
+        <li data-toggle="collapse" data-target="#service" class="collapsed">
+            <a href="servers.html"><i class="fa fa-sitemap fa-lg"></i> Servers Mgr </a>
+        </li>
+
+        <li data-toggle="collapse" data-target="#application" class="collapsed">
+            <a href="applications.html"><i class="fa fa-code fa-lg"></i> Applicatinos Mgr</a>
+        </li>
+
+        <li data-toggle="collapse" data-target="#vulnerbilities" class="collapsed">
+            <a href="vulnerbilities.html"><i class="fa fa-archive fa-lg"></i> Vulnerbilities Mgr</a>
+        </li>
+
+        <li data-toggle="collapse" data-target="#vulnerbilities" class="collapsed">
+            <a href="news.html"><i class="fa fa-file  fa-lg"></i> News Mgr</a>
+        </li>
+
+        <li data-toggle="collapse" data-target="#users" class="collapsed">
+            <a href="users.html"><i class="fa fa-users fa-lg"></i> Users Mgr</a>
+        </li>
+        <li data-toggle="collapse" data-target="#users" class="collapsed">
+            <a href="notification.html"><i class="fa fa-envelope fa-lg"></i> notification Mgr</a>
+        </li>
+    </ul>
+</div>
+<div class="bottom_fixed">
+    <div class="botton">
+        <a href="#"><i class="fa fa-user fa-lg fa-2x buttom-button" title="User Account Management"></i></a>
+    </div>
+    <div class="botton">
+        <a href="#"><i class="fa fa-cogs fa-lg fa-2x buttom-button" title="Config Your Envirotment"></i></a>
+    </div>
+    <div class="botton">
+        <a href="#"><i class="fa fa-power-off fa-lg fa-2x buttom-button" title="Log Out"></i></a>
+    </div>
+</div>

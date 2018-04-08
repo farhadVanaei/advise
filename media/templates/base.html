@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet" id="bootstrap-css">
+    <script src="{{ url_for('static',filename='js/jquery-1.11.1.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <link href="{{ url_for('static',filename='css/font-awesome.min.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static',filename='js/vis.min.js') }}"></script>
+    <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/vis.min.css') }}" rel="stylesheet">
+    <title>Security Advisor </title>
+</head>
+<body>
+<div class="row">
+    <div class="nav-side-menu col-sm-2">
+        {% include("menu.html") %}
+    </div>
+    <div id="main-container" class="col-sm-7">
+        <h1 style="display: inline-table;">{{ name }}</h1>&nbsp;&nbsp;<span
+            class="glyphicon glyphicon-plus glyphicon-lg"></span>
+        <table class="table table-hover table-striped">
+            <thead>
+            <tr>
+                <th>
+                    #
+                </th>
+                {% for x in title %}
+                    {% if x != "id" %}
+                        <th>
+                            {{ x }}
+                        </th>
+                    {% endif %}
+
+                {% endfor %}
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for zone in list %}
+            <tr>
+                <td>
+                    {{ zone }}
+                </td>
+                <td>
+                    {{ list[zone]['name'] }}
+                </td>
+                <td>
+                    <span class="glyphicon glyphicon-edit" onclick="alert('{{ list[zone]['id'] }}')"></span>
+                    <span class="glyphicon glyphicon-remove"></span>
+
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-3" style="height: 100%;overflow-y:scroll;">
+        <div style="">
+            < Date : 2018-03-04 > < Time : 01:57:34 PM >
+        </div>
+        <h2>News</h2>
+        <div class="jumbotron well">
+            <h3>
+                Microsoft Exchnage Server
+            </h3>
+            Microsoft Exchange Server 2016 CU5 and Microsoft Exchange Server 2016 CU5 allow a spoofing vulnerability due
+            to the way Outlook Web Access (OWA) validates web requests, aka "Microsoft Exchange Spoofing Vulnerability".
+            <br/><a class="" href="#">Read More</a>
+        </div>
+        <div class="jumbotron well">
+            <h3>
+                PHP Scripts Mall Slickdeals
+            </h3>
+            Cross Site Scripting (XSS) exists in PHP Scripts Mall Slickdeals / DealNews / Groupon Clone Script 3.0.2 via
+            a User Profile Field parameter.
+            <br/><a class="" href="#">Read More</a>
+        </div>
+        <div class="jumbotron well">
+            <h3>
+                PHP Scripts Mall Alibaba
+            </h3>
+            Cross Site Scripting (XSS) exists in PHP Scripts Mall Alibaba Clone Script 1.0.2 via a profile parameter.
+            <br/><a class="" href="#">Read More</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
